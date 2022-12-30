@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "JwazR9uG7C2GjfifadoDtpHcCI2W0U2RPIeIHZhvAxs=",
+  "Source": "IvueDomain.Server",
+  "BasePath": "_content/IvueDomain.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
