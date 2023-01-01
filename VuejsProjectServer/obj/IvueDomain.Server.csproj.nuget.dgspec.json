@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abhishek.chidrawar\\Documents\\Git\\VueProject\\VuejsProjectServer\\IvueDomain.Server.csproj": {}
+    "D:\\Research\\VueJsApplication\\IvueDomain\\VuejsProjectServer\\IvueDomain.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abhishek.chidrawar\\Documents\\Git\\VueProject\\VuejsProjectServer\\IvueDomain.Server.csproj": {
+    "D:\\Research\\VueJsApplication\\IvueDomain\\VuejsProjectServer\\IvueDomain.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abhishek.chidrawar\\Documents\\Git\\VueProject\\VuejsProjectServer\\IvueDomain.Server.csproj",
+        "projectUniqueName": "D:\\Research\\VueJsApplication\\IvueDomain\\VuejsProjectServer\\IvueDomain.Server.csproj",
         "projectName": "IvueDomain.Server",
-        "projectPath": "C:\\Users\\abhishek.chidrawar\\Documents\\Git\\VueProject\\VuejsProjectServer\\IvueDomain.Server.csproj",
-        "packagesPath": "C:\\Users\\abhishek.chidrawar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abhishek.chidrawar\\Documents\\Git\\VueProject\\VuejsProjectServer\\obj\\",
+        "projectPath": "D:\\Research\\VueJsApplication\\IvueDomain\\VuejsProjectServer\\IvueDomain.Server.csproj",
+        "packagesPath": "C:\\Users\\nilesh.patil\\.nuget\\packages\\",
+        "outputPath": "D:\\Research\\VueJsApplication\\IvueDomain\\VuejsProjectServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\abhishek.chidrawar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nilesh.patil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
