@@ -9,11 +9,11 @@ using VuejsProjectServer.Data;
 
 #nullable disable
 
-namespace VuejsProjectServer.Migrations
+namespace IvueDomain.Server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221230122008_addemployeedepttoDb")]
-    partial class addemployeedepttoDb
+    [Migration("20230103130407_initialmigration")]
+    partial class initialmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,7 +33,7 @@ namespace VuejsProjectServer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DepartmentId"));
 
-                    b.Property<string>("Departname")
+                    b.Property<string>("DepartmentName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

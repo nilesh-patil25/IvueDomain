@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace VuejsProjectServer.Migrations
+namespace IvueDomain.Server.Migrations
 {
     /// <inheritdoc />
-    public partial class addemployeedepttoDb : Migration
+    public partial class initialmigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,7 +17,7 @@ namespace VuejsProjectServer.Migrations
                 {
                     DepartmentId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Departname = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    DepartmentName = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

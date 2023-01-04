@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using VuejsProjectServer.Models;
 
 namespace VuejsProjectServer.Data
@@ -10,5 +11,6 @@ namespace VuejsProjectServer.Data
         }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
+
     }
 }

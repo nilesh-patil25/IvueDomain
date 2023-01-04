@@ -1,0 +1,2 @@
+C:\Users\abhishek.chidrawar\Documents\public\IvueDomain\VuejsProjectClient\obj\Debug\IvueDomain.Client.esproj.SuggestedBindingRedirects.cache
+C:\Users\abhishek.chidrawar\Documents\public\IvueDomain\VuejsProjectClient\obj\Debug\IvueDomain.Client.esproj.CoreCompileInputs.cache

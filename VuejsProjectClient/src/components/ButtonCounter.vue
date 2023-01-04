@@ -9,5 +9,5 @@
 </script>
 
 <template>
-    <button @click="count++">You clicked me {{ count }} times.</button>
+    <button @click="count++">You clicked me this much Times {{ count }}.</button>
 </template>

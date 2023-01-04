@@ -4,10 +4,10 @@ using VuejsProjectServer.Data;
 
 namespace VuejsProjectServer.Models
 {
-    public class EmployeeRepository : IEmployeeRepository
+    public class EmployeesRepository : IEmployeeRepository
     {
         private readonly ApplicationDbContext appDbContext;
-        public EmployeeRepository(ApplicationDbContext appDbContext)
+        public EmployeesRepository(ApplicationDbContext appDbContext)
         {
             this.appDbContext = appDbContext;
         }

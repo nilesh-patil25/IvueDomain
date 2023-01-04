@@ -8,7 +8,7 @@ using VuejsProjectServer.Data;
 
 #nullable disable
 
-namespace VuejsProjectServer.Migrations
+namespace IvueDomain.Server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -30,7 +30,7 @@ namespace VuejsProjectServer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DepartmentId"));
 
-                    b.Property<string>("Departname")
+                    b.Property<string>("DepartmentName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
