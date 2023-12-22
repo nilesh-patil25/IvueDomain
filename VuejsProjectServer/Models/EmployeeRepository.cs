@@ -14,15 +14,23 @@ namespace VuejsProjectServer.Models
 
         public async Task<Employee> AddEmployee(Employee employee)
         {
-            if (employee.Department != null)
+            try
             {
-                appDbContext.Entry(employee.Department).State = EntityState.Unchanged;
-            }
+                if (employee.Department != null)
+                {
+                    appDbContext.Entry(employee.Department).State = EntityState.Unchanged;
+                }
 
-            var result = await appDbContext.Employees.AddAsync(employee);
-            await appDbContext.SaveChangesAsync();
-            return result.Entity;
+                var result = await appDbContext.Employees.AddAsync(employee);
+                await appDbContext.SaveChangesAsync();
+                return result.Entity;
+            }
+            catch (Exception ex)
+            {
+                throw; 
+            }
         }
+
 
         public async Task DeleteEmployee(int employeeId)
         {
