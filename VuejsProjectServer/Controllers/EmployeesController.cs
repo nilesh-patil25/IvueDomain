@@ -31,23 +31,16 @@ namespace IvueDomain.Server.Controllers
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Employee>> GetEmployee(int id)
         {
-            try
-            {
-                var result = await employeeRepository.GetEmployee(id);
+            var result = await employeeRepository.GetEmployee(id);
 
-                if (result == null)
-                {
-                    return NotFound();
-                }
-
-                return result;
-            }
-            catch (Exception)
+            if (result == null)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Error retrieving data from the database");
+                return NotFound();
             }
+
+            return result;
         }
+
 
         [HttpPost]
         public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)

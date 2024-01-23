@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IvueDomain.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50c41bfde4ca84667ced6f9610e14f5e95b90857")]
 [assembly: System.Reflection.AssemblyProductAttribute("IvueDomain.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IvueDomain.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
