@@ -26,22 +26,15 @@ namespace VuejsProjectServer.Controllers
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Department>> GetDepartment(int id)
         {
-            try
-            {
-                var result = await departmentRepository.GetDepartment(id);
+            var result = await departmentRepository.GetDepartment(id);
 
-                if (result == null)
-                {
-                    return NotFound();
-                }
-
-                return result;
-            }
-            catch (Exception)
+            if (result == null)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Error retrieving data from the database");
+                return NotFound();
             }
+
+            return Ok(result);
         }
+
     }
 }
