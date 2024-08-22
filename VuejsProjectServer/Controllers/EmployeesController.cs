@@ -17,16 +17,10 @@ namespace IvueDomain.Server.Controllers
         [HttpGet]
         public async Task<ActionResult> GetEmployees()
         {
-            try
-            {
-                return Ok(await employeeRepository.GetEmployees());
-            }
-            catch (Exception)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Error retrieving data from the database");
-            }
+            var employees = await employeeRepository.GetEmployees();
+            return Ok(employees);
         }
+
 
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Employee>> GetEmployee(int id)
