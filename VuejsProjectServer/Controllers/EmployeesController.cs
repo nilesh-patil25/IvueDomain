@@ -39,30 +39,23 @@ namespace IvueDomain.Server.Controllers
         [HttpPost]
         public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
         {
-            try
+            if (employee == null)
+                return BadRequest("Invalid employee data.");
+
+            var existingEmployee = await employeeRepository.GetEmployee(employee.EmployeeId);
+
+            if (existingEmployee != null)
             {
-                if (employee == null)
-                    return BadRequest();
-
-                var emp = await employeeRepository.GetEmployee(employee.EmployeeId);
-
-                if (emp != null)
-                {
-                    ModelState.AddModelError("ID", "Employee id already in use");
-                    return BadRequest(ModelState);
-                }
-
-                var createdEmployee = await employeeRepository.AddEmployee(employee);
-
-                return CreatedAtAction(nameof(GetEmployee),
-                    new { id = createdEmployee.EmployeeId }, createdEmployee);
+                ModelState.AddModelError("ID", "Employee ID already in use");
+                return BadRequest(ModelState);
             }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Error creating new employee record");
-            }
+
+            var createdEmployee = await employeeRepository.AddEmployee(employee);
+
+            return CreatedAtAction(nameof(GetEmployee),
+                new { id = createdEmployee.EmployeeId }, createdEmployee);
         }
+
 
         [HttpPut("{id:int}")]
         public async Task<ActionResult<Employee>> UpdateEmployee(int id, Employee employee)
