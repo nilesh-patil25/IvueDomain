@@ -60,26 +60,18 @@ namespace IvueDomain.Server.Controllers
         [HttpPut("{id:int}")]
         public async Task<ActionResult<Employee>> UpdateEmployee(int id, Employee employee)
         {
-            try
-            {
-                if (id != employee.EmployeeId)
-                    return BadRequest("Employee ID mismatch");
+            if (id != employee.EmployeeId)
+                return BadRequest("Employee ID mismatch");
 
-                var employeeToUpdate = await employeeRepository.GetEmployee(id);
+            var employeeToUpdate = await employeeRepository.GetEmployee(id);
 
-                if (employeeToUpdate == null)
-                {
-                    return NotFound($"Employee with Id = {id} not found");
-                }
+            if (employeeToUpdate == null)
+                return NotFound($"Employee with Id = {id} not found");
 
-                return await employeeRepository.UpdateEmployee(employee);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Error updating employee record");
-            }
+            var updatedEmployee = await employeeRepository.UpdateEmployee(employee);
+            return Ok(updatedEmployee);
         }
+
 
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> DeleteEmployee(int id)
