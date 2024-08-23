@@ -76,24 +76,17 @@ namespace IvueDomain.Server.Controllers
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> DeleteEmployee(int id)
         {
-            try
+            var employeeToDelete = await employeeRepository.GetEmployee(id);
+
+            if (employeeToDelete == null)
             {
-                var employeeToDelete = await employeeRepository.GetEmployee(id);
-
-                if (employeeToDelete == null)
-                {
-                    return NotFound($"Employee with Id = {id} not found");
-                }
-
-                await employeeRepository.DeleteEmployee(id);
-
-                return Ok($"Employee with Id = {id} deleted");
+                return NotFound($"Employee with Id = {id} not found");
             }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Error deleting employee record");
-            }
+
+            await employeeRepository.DeleteEmployee(id);
+
+            return Ok($"Employee with Id = {id} deleted");
         }
+
     }
 }
